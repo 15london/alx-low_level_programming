@@ -1,33 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Return: Always 0 (Success)
- */
+   * main - print alphabet in upper and lower
+   *
+   * Return: zero
+   */
 int main(void)
 {
-	char c;
+	char ch;
+	char CH;
 
-	for (c = 'a'; c <= 'z'; c++)
-		putchar(c);
-	putchar('\n');
-	return (0);
-}
-3
-#include <stdio.h>
-
-/**
- * main - Entry point
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-	char c;
-
-	for (c = 'a'; c <= 'z'; c++)
-		putchar(c);
-	for (c = 'A'; c <= 'Z'; c++)
-		putchar(c);
+	for (ch = 'a'; ch <= 'z'; ch++)
+		putchar(ch);
+	for (CH = 'A'; CH <= 'Z'; CH++)
+		putchar(CH);
 	putchar('\n');
 	return (0);
 }
