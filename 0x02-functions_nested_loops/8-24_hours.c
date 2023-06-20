@@ -1,29 +1,32 @@
 #include "main.h"
 /**
- *times_table - Prints the 9 times table, starting with 0.
+ * jack_bauer - func that prints every minute of the day of Jack Bauer, starti
+ * n from 00:00 to 23:59, min loop counts mins, while hour loop counts hours
+ * and resets mins
+ * Return: 0
  */
-void times_table(void)
+void jack_bauer(void)
 {
-	int num, mult, prod;
+	int hours = 0;
+	int minutes = 0;
+	int hours_remainder;
+	int mins_remainder;
 
-	for (num = 0; num <= 9; num++)
+	while (hours <= 23)
 	{
-		_putchar('0');
-
-		for (mult = 1; mult <= 9; mult++)
-		{
-			_putchar(',');
-			_putchar(' ');
-
-			prod = num * mult;
-
-			if (prod <= 9)
-				_putchar(' ');
-			else
-				_putchar((prod / 10) + '0');
-
-			_putchar((prod % 10) + '0');
-		}
-		_putchar('\n');
+	while (minutes <= 59)
+	{
+	mins_remainder = minutes % 10;
+	hours_remainder = hours % 10;
+	_putchar(hours / 10 + '0');
+	_putchar(hours_remainder + '0');
+	_putchar(':');
+	_putchar(minutes / 10 + '0');
+	_putchar(mins_remainder + '0');
+	minutes++;
+	_putchar('\n');
 	}
+	hours++;
+	minutes = 0;
+}
 }
