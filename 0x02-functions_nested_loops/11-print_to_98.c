@@ -1,32 +1,23 @@
 #include <stdio.h>
 
 /**
- * main - prints the first 50 Fibonacci numbers, starting with 1 and 2
- * followed by a new line
- * Return: Always 0 (Success)
+ * print_to_98 - Prints all natural numbers from input to 98,
+ *               in order separated by a comma followed by a space.
+ * @n: The number to begin counting at.
  */
-int main(void)
+void print_to_98(int n)
 {
-	long int i, j, k, next;
-
-	j = 1;
-
-	k = 2;
-
-	for (i = 1; i <= 50; ++i)
+	if (n >= 98)
 	{
-		if (j != 20365011074)
-		{
-			printf("%ld, ", j);
-		} else
-		{
-			printf("%ld\n", j);
-		}
-		next = j + k;
-		j = k;
-		k = next;
+		while (n > 98)
+			printf("%d, ", n--);
+		printf("%d\n", n);
 	}
 
-	return (0);
+	else
+	{
+		while (n < 98)
+			printf("%d, ", n++);
+		printf("%d\n", n);
+	}
 }
-
