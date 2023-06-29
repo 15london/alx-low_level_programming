@@ -1,6 +1,6 @@
 _putchar.c
 #include
-&quot;main.h&quot;                                                                                                                  
+&quot;main.h&quot;
 
 #include
 &lt;unistd.h&gt;                                                                                                               
